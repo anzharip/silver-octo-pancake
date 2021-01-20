@@ -4,7 +4,7 @@ export function numberOfWaysToMakeChange(n: number, denoms: number[]): number {
   for (let denom of denoms) {
     for (let amount = 1; amount < n + 1; amount++) {
       if (denom <= amount) {
-        ways[amount] = ways[amount - denom];
+        ways[amount] += ways[amount - denom];
       }
     }
   }
