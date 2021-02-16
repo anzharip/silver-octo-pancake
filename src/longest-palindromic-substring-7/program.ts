@@ -21,7 +21,6 @@ export function longestPalindromicSubstring(string: string) {
 }
 
 const traverseNode = (string: string, k: number, l: number): string => {
-  console.log(k, l);
   while (string[k] === string[l] && k >= 0 && l < string.length) {
     k--, l++;
   }
